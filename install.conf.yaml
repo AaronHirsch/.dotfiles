@@ -1,0 +1,119 @@
+# yamllint disable rule:line-length
+---
+- defaults:
+    link:
+      relink: true
+      force: true
+
+- shell:
+    - xcode-select --install || true
+    - git submodule update --init --recursive
+    - sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zinit/master/doc/install.sh)" || true
+    - git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm || true
+    - tic -x ./tmux/xterm-256color-italic.terminfo
+    - tic -x ./tmux/tmux-256color.terminfo
+
+- clean:
+    ~/:
+      force: true
+    ~/.config:
+      force: true
+      recursive: true
+    ~/.tmux:
+      force: true
+      recursive: true
+
+- shell:
+    - mkdir -p ~/.config/nvim
+    - mkdir -p ~/.config/nvim/autoload
+    - mkdir -p ~/.config/nvim/lua
+    - mkdir -p ~/.tmux
+
+- tap:
+    - cjbassi/gotop
+    - homebrew/cask
+    - homebrew/cask-fonts
+    - homebrew/cask-versions
+    - universal-ctags/universal-ctags
+
+- brew:
+    - --cask alfred
+    - --cask docker
+    - --cask font-hack-nerd-font
+    - --cask font-jetbrains-mono
+    - --cask font-victor-mono
+    - --cask iterm2-beta
+    - --cask spectacle
+    - --cask spotify
+    - asdf
+    - bat
+    - cdiff
+    - coreutils
+    - fd
+    - findutils
+    - fzf
+    - git-delta
+    - git-flow-avh
+    - gotop
+    - gpg
+    - htop
+    - jq
+    - kubectl
+    - neovim --HEAD
+    - readline
+    - reattach-to-user-namespace
+    - ripgrep
+    - ruby-build
+    - the_silver_searcher
+    - thefuck
+    - tmux
+    - universal-ctags/universal-ctags/universal-ctags --with-jansson --HEAD
+    - vint
+    - wagoodman/dive/dive
+    - xz
+    - yamllint
+    - yq
+    - zlib
+
+- link:
+    ~/.agignore: agignore
+    ~/.config/nvim: nvim
+    ~/.default-gems: default-gems
+    ~/.default-npm-packages: default-npm-packages
+    ~/.default-python-packages: default-python-packages
+    ~/.eslintrc: eslintrc
+    ~/.prettierrc: prettierrc
+    ~/.gitconfig: git/gitconfig
+    ~/.gitignore: git/gitignore
+    ~/.p10k.zsh: p10k
+    ~/.tmux.conf: tmux/tmux.conf
+    ~/.asdfrc: asdfrc
+    ~/.zshrc: zshrc
+
+- shell:
+    - ${ASDF_DATA_DIR:=$HOME/.asdf}/plugins/nodejs/bin/import-release-team-keyring
+
+- asdf:
+    - plugin: python
+      url: https://github.com/tuvistavie/asdf-python.git
+      global: 3.8.5
+      versions:
+        - 2.7.18
+        - 3.6.4
+        - 3.8.5
+    - plugin: nodejs
+      url: https://github.com/asdf-vm/asdf-nodejs.git
+      global: 14.15.0
+      versions:
+        - 12.18.3
+        - 14.15.0
+    - plugin: ruby
+      url: https://github.com/asdf-vm/asdf-ruby.git
+      global: 2.7.1
+      versions:
+        - 2.7.1
+    - plugin: java
+      url: https://github.com/halcyon/asdf-java.git
+      global: adoptopenjdk-15.0.2+7
+      versions:
+        - adoptopenjdk-15.0.2+7

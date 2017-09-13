@@ -1,0 +1,8 @@
+pip
+setuptools
+pynvim
+neovim
+msgpack
+yapf
+pylint
+black

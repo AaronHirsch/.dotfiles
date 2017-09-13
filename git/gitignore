@@ -1,0 +1,55 @@
+# Compiled sources
+# ===========================
+
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# Packages
+# ===========================
+
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# Logs
+# ===========================
+
+*.log
+
+# OS generated files
+# ===========================
+
+.DS_Store
+.DS_Store?
+._*
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Editors
+# ===========================
+
+# VIM
+Session.vim
+.*.swo
+.*.swp
+*~
+
+# Node
+# ===========================
+
+npm-debug.log*
+node_modules/
+
+# Version Manager
+.nvmrc
+.fnmrc

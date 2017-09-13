@@ -1,0 +1,11 @@
+neovim
+prettier
+prettier-standard
+standard
+eslint
+yarn
+vls
+eslint-plugin-vue
+lua-fmt
+typescript
+typescript-language-server

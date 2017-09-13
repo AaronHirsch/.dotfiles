@@ -1,0 +1,21 @@
+[submodule "dotbot"]
+	path = dotbot
+	url = https://github.com/anishathalye/dotbot
+[submodule "dotbot-brew"]
+	path = dotbot-brew
+	url = https://github.com/d12frosted/dotbot-brew.git
+[submodule "oh-my-zsh/custom/plugins/zsh-syntax-highlighting"]
+	path = oh-my-zsh/custom/plugins/zsh-syntax-highlighting
+	url = git://github.com/zsh-users/zsh-syntax-highlighting.git
+[submodule "oh-my-zsh/custom/plugins/zsh-autosuggestions"]
+	path = oh-my-zsh/custom/plugins/zsh-autosuggestions
+	url = git://github.com/zsh-users/zsh-autosuggestions.git
+[submodule "oh-my-zsh/custom/themes/zsh-autosuggestions"]
+	path = oh-my-zsh/custom/plugins/zsh-autosuggestions
+	url = git://github.com/zsh-users/zsh-autosuggestions.git
+[submodule "oh-my-zsh/custom/plugins/zsh-kubectl-prompt"]
+	path = oh-my-zsh/custom/plugins/zsh-kubectl-prompt
+	url = https://github.com/superbrothers/zsh-kubectl-prompt
+[submodule "dotbot-asdf"]
+	path = dotbot-asdf
+	url = https://github.com/sobolevn/dotbot-asdf.git

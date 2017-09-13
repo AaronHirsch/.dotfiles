@@ -1,0 +1,18 @@
+{
+  "overrides": [
+    {
+      "files": [
+        "*.yaml",
+        "*.yml"
+      ],
+      "options": {
+        "bracketSpacing": false,
+        "singleQuote": false
+      }
+    }
+  ],
+  "semi": false,
+  "singleQuote": true,
+  "trailingComma": "none",
+  "vueIndentScriptAndStyle": true
+}
